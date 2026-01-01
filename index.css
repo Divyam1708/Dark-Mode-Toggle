@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --primary_text_color:rgb(122, 52, 52);
+    --primary_background_color:rgb(214, 232, 248);
+    --primary_section_text_color:rgb(46, 64, 115);
+    --primary_section_background_color:rgb(88, 143, 5);
+    --primary_section_border_color:rgb(0, 0, 0);
+    
+    --primary_dark_text_color:rgb(255, 255, 255);
+    --primary_dark_background_color:rgb(0, 0, 0);
+    --primary_dark_section_text_color:rgb(250, 235, 96);
+    --primary_dark_section_background_color:rgb(40, 23, 85);
+    --primary_dark_section_border_color:rgb(255, 255, 255);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--primary_background_color);
+  color: var(--primary_text_color);
+  font-size: 1em;
+  transition: all 1s;
+}
+
+body.dark{
+    background: var(--primary_dark_background_color);
+    color: var(--primary_dark_text_color);
+}
+
+
+button{
+    background-color: inherit;
+    color: inherit;
+}
+
+.section_design_1{
+    background-color: var(--primary_section_background_color);
+    color: var(--primary_section_text_color);
+    margin-block: 1rem;
+    margin-inline: 0.1rem;
+    padding: 0.5rem;
+    border:2px solid var(--primary_section_border_color);
+    transition: all 1s;
+    transform: scale(0.95);
+    position: relative;
+}
+
+.section_design_1:hover{
+    transform: scale(1);
+    transition: all 1s;
+}
+
+.container:hover .section_design_1:not(:hover){
+    transform: scale(0.95);
+    opacity: 0.09;
+    transition: all 1s;
+}
+
+.section_design_1.dark{
+    background-color: var(--primary_dark_section_background_color);
+    color: var(--primary_dark_section_text_color);
+    border:2px solid var(--primary_dark_section_border_color);
+}
+
+
+.section_hover_div{
+    border: 2px solid red;
+    background-color: var(--primary_section_background_color);
+    padding: 0.5rem;
+    max-width: fit-content;
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    right: 25%;
+    display:none;
+    opacity: 1;
+    transition: all 5s;
+}
+
+.section_hover_div.dark{
+    background-color: var(--primary_dark_section_background_color);
+}
+
+.section_hover_div.visible{
+    transition: all 5s;
+    display:block;
+}
+
+
+
+
+
+
+
